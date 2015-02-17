@@ -1,0 +1,28 @@
+﻿<Window x:Class="HttpServerUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="300" Width="480" ResizeMode="CanMinimize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="234*"/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="HTTP 服务器" VerticalAlignment="Center" FontSize="18" Height="22" Width="106" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <StackPanel VerticalAlignment="Top" Grid.Row="1" Margin="10,15,10,0">
+            <TextBlock Text="网站根目录" Margin="0,0,0,5"/>
+            <TextBox x:Name="TB_DIR" Margin="0,0,0,5" Text="D:\wwwroot"/>
+            <TextBlock Text="绑定端口" Margin="0,0,0,5"/>
+            <TextBox x:Name="TB_PORT" Margin="0,0,0,5" Text="8899"/>
+            <TextBlock Text="默认文档" Margin="0,0,0,5"/>
+            <TextBox x:Name="TB_DEFAULT" Margin="0,0,0,15" Text="index.html"/>
+            <Button x:Name="BT_START" Content="运行" Margin="0,0,0,15"/>
+            <Button x:Name="BT_STOP" Content="停止"/>
+        </StackPanel>
+        <TextBox x:Name="TB_LOG" VerticalScrollBarVisibility="Visible" TextWrapping="Wrap" IsReadOnly="True" Grid.Column="1" Margin="15" Grid.Row="1"/>
+
+    </Grid>
+</Window>
